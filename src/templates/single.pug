@@ -1,0 +1,48 @@
+extends layouts/_layout.pug
+
+block config
+  - const title = "HAAVE"
+  - const description = "遊びごごろのあるモダンなスタイルを叶えてくれる 厳選された上質な素材のみを使用する事にこだわった 大人になった今だからこそ好きだと思えるもの。"
+  - const url = "/single"
+  - const bgcolor = "#869077"
+  - const footercolor = "#878081"
+  - const textcolor = "light"
+
+block content
+  main.main
+    .product-section
+      section.product-introduction
+        .product-information
+          .product-header
+            h1.product-title Suede round-toe pumps
+            p.label Style 01
+            p スエードラウンドトゥパンプス
+          ul
+            li Sand
+            li Heel height：8.5cm
+            li Made by hand in Japan
+            li 100% suède leather upper（goat）. Hand stitched. Leather insole,（kip） lining, outsole.（goat）  Leather block heel.(goat）
+            li Size：22-25
+          p.product-description.
+            きめ細かく滑らかで上品な光沢をもつスエードで仕立てたラウンドトゥパンプス。温もりのあるベージュはどのようなスタイルにもすっと馴染んでくれるカラーです。#[br]
+            エレガントな表情のラウンドトゥに、コバをアクセントにした無駄のないシックなデザインです。#[br]
+            レッグラインを美しく見せる8.5cmのチャンキーヒールは、履き心地の良さと安定感も備えており、スタイルやシーンを選びません。#[br]
+            アウトソールには、弾力性が高く、吸湿性と放湿性に優れている牛革を使用。また、インソールやライニングには、繊維の密度が高く柔らかで傷に強い高品質のゴード（山羊革）を使用することで、 履き込むほどに足に馴染んでくれます。
+          a(href="#")
+            .link Contact
+              i.las.la-arrow-right
+        .product-thumbnail
+          img(src="../images/product1.jpg", alt="")
+      section.product-images
+        img(src="../images/single1.jpg", alt="")
+        img(src="../images/single2.jpg", alt="")
+        img(src="../images/single3.jpg", alt="")
+      .pager
+        .prev
+          a(href="#")
+            .link Previous product
+              i.las.la-arrow-left
+        .next
+          a(href="#")
+            .link Next product
+              i.las.la-arrow-right

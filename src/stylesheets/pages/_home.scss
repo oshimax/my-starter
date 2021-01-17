@@ -1,0 +1,140 @@
+@use '../global' as *;
+
+.hero {
+  min-height: calc(100vh - 120px);
+  display: flex;
+  justify-content: center;
+
+  @media (max-width: 767px) {
+    min-height: auto;
+  }
+
+  &-inner {
+    margin: auto;
+    position: relative;
+    height: fit-content;
+
+    @media (max-width: 767px) {
+      margin: 50px auto;
+    }
+  }
+
+  &-image {
+    width: 26vw;
+    min-width: 280px;
+    max-width: 440px;
+    padding-bottom: 3vw;
+
+    @media (max-width: 767px) {
+      padding-bottom: 80px;
+		}
+  }
+
+  &-text {
+    font-size: 15px;
+    color: $color-lighttext;
+    position: absolute;
+    bottom: 10%;
+    right: -60%;
+
+    @media (max-width: 767px) {
+			bottom: 0;
+      right: 0;
+      padding: 0;
+		}
+  }
+
+  &-concept {
+    @media (max-width: 767px) {
+			display: none;
+		}
+  }
+}
+
+.lead {
+  background-color: $color-base;
+  padding: 10vw 0;
+  > p {
+    margin: 0 auto;
+    width: fit-content;
+    font-size: 15px;
+
+    @media (max-width: 767px) {
+      font-size: 13px;
+      padding: 32px;
+		}
+  }
+}
+
+.introduction {
+  &-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    @media (max-width: 767px) {
+      grid-template-columns: 1fr;
+		}
+
+    .introduction-item {
+      height: 40vw;
+      padding: 3vw;
+
+      @media (max-width: 767px) {
+        height: 110vw;
+      }
+
+      .introduction-image {
+        width: 50%;
+        height: 85%;
+        margin: -7% auto 0;
+        background-size: cover;
+
+        @media (max-width: 767px) {
+          width: 70%;
+          height: 80%;
+          margin: -8% auto 0;
+        }
+      }
+
+      .caption {
+        text-align: center;
+        margin-top: 1.4vw;
+        line-height: 1.1;
+        font-size: 1vw;
+
+        @media (max-width: 767px) {
+          margin-top: 3vw;
+          font-size: 3vw;
+        }
+      }
+
+      &.about {
+        background-color: #97A6B0;
+        color: #702B27;
+
+        .introduction-image {
+          background-image: url(../../images/introduction1.jpg);
+        }
+      }
+
+      &.instagram {
+        background-color: #925249;
+        color: #C5B792;
+
+        .introduction-image {
+          background-image: url(../../images/introduction2.jpg);
+        }
+      }
+
+      h2 {
+        font-size: 4vw;
+        text-align: center;
+
+        @media (max-width: 767px) {
+          margin-top: 10px;
+          font-size: 10vw;
+        }
+      }
+    }
+  }
+}

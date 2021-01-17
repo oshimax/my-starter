@@ -1,0 +1,52 @@
+extends layouts/_layout.pug
+
+block config
+  - const title = "About ― HAAVE"
+  - const description = "遊びごごろのあるモダンなスタイルを叶えてくれる 厳選された上質な素材のみを使用する事にこだわった 大人になった今だからこそ好きだと思えるもの。"
+  - const url = "/about"
+  - const bgcolor = "#D3CDCA"
+  - const footercolor = "#B3B2AA"
+  - const textcolor = "dark"
+
+block content
+  main.main
+    .about-container
+      .about-inner
+        section.about-row
+          figure
+            img(src="../images/about1.jpg", alt="")
+          .text
+            h1 Concept
+            p.
+              遊びごごろのあるモダンなスタイルを叶えてくれる#[br]
+              厳選された上質な素材のみを使用する事にこだわった#[br]
+              大人になった今だからこそ好きだと思えるもの。
+        section.about-row
+          figure
+            img(src="../images/about2.jpg", alt="")
+          .text
+            h1 Factory
+            p.
+              ハンドメイドでしか表現できない風合いにこだわり#[br]
+              妥協を許さない計算されたフォルムを追求した#[br]
+              高品質なシューズを手がけるファクトリーです。#[br]
+              長年培ってきた知識、経験、審美眼をもつ#[br]
+              熟練の職人の丁寧なモノ作りによって生み出されるシューズは、#[br]
+              数々の大手百貨店やセレクトショップにも選ばれつづけています。
+        section.about-row
+          figure
+            img(src="../images/about3.jpg", alt="")
+          .text
+            h1 Story
+            p.
+              自由なドレス選びを制限しない#[br]
+              夢に描くスタイルやシーンに寄り添う選択肢を与えてくれる#[br]
+              そしてずっと好きだと思えるような特別な一足を届けたい。#[br]
+            p.
+              そんな思いを込めて、"夢"という意味を持つブランド、#[br]
+              HAAVE(ハーヴェ)が生まれました。
+            p.
+              クラシックな仕立てにさりげないデザイン性と品質を備えた#[br]
+              自分らしさを表現できるシューズを。
+            p.
+              夢に向かって歩む女性のために。#[br]

@@ -1,0 +1,29 @@
+.link {
+  min-width: 200px;
+  margin-top: 1em;
+  border: 1px solid #FFFFFF;
+  width: 100%;
+  padding: 0.3em 0.5em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 15px;
+}
+
+.pager {
+  margin: 40px;
+  display: flex;
+  justify-content: space-between;
+
+  @media (max-width: 767px) {
+    flex-direction: column;
+  }
+
+  .prev .link {
+    flex-direction: row-reverse;
+
+    @media (max-width: 767px) {
+      margin-bottom: 30px;
+    }
+  }
+}

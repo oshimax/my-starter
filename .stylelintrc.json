@@ -1,0 +1,36 @@
+{
+  "extends": "stylelint-config-sass-guidelines",
+  "rules": {
+    "block-opening-brace-space-before": "always",
+    "block-opening-brace-newline-after": ["always"],
+    "block-closing-brace-newline-before": ["always"],
+    "block-closing-brace-empty-line-before": "never",
+    "color-named": "never",
+    "declaration-colon-space-after": "always",
+    "indentation": "tab",
+    "number-leading-zero": "never",
+    "max-nesting-depth": 3,
+    "at-rule-empty-line-before": [
+      "always",
+      {
+        "except": ["blockless-after-same-name-blockless", "first-nested"]
+      }
+    ],
+    "custom-property-empty-line-before": [
+      "always",
+      {
+        "except": ["after-custom-property", "first-nested"]
+      }
+    ],
+    "declaration-empty-line-before": [
+      "always",
+      {
+        "except": ["after-declaration", "first-nested"]
+      }
+    ],
+    "rule-empty-line-before": ["always-multi-line"],
+    "value-list-comma-newline-after": "always-multi-line",
+    "value-list-comma-space-after": "always-single-line",
+    "value-list-comma-space-before": "never"
+  }
+}
