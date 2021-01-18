@@ -1,0 +1,26 @@
+@charset 'UTF-8';
+
+@use 'foundation';
+@use 'layouts';
+@use 'pages';
+@use 'components';
+
+$font-stack: Helvetica, sans-serif;
+$primary-color: #333;
+
+body {
+	color: $primary-color;
+	font: 90% $font-stack;
+}
+
+::placeholder {
+	color: #eee;
+}
+
+.example {
+	background: linear-gradient(to bottom, #fff, #000);
+	display: grid;
+	transition: all .5s;
+	user-select: none;
+}
+

@@ -1,0 +1,46 @@
+-
+  let menu = [
+    {
+      pagelink: '/about.html',
+      pagetitle: 'About',
+    },
+    {
+      pagelink: '/lookbook.html',
+      pagetitle: 'Has Child Page',
+      childitems: [
+        {
+          pagelink: '/child1.html',
+          pagetitle: 'Child Page',
+        },
+        {
+          pagelink: '/child2.html',
+          pagetitle: 'Child Page',
+        },
+        {
+          pagelink: '/child3.html',
+          pagetitle: 'Child Page',
+        },
+      ],
+    },
+    {
+      pagelink: '/contact.html',
+      pagetitle: 'Contact',
+    },
+  ];
+
+doctype html
+
+block config
+  - const title = "Title"
+  - const description = "Description"
+
+html(lang="ja")
+  head
+    include ./includes/_meta
+  body
+    .wrapper
+      include ./includes/_header
+
+      block content
+
+      include ./includes/_footer

@@ -1,13 +1,10 @@
 header.header
   h1.logo
     a(href="./")
-      if textcolor === 'light'
-        img(src="../images/haave_logo_white.svg")
-      else
-        img(src="../images/haave_logo.svg")
+      img(src="../images/logo.svg")
   .nav-container
     nav.nav
-      ul.menu(class=`${textcolor}`)
+      ul.menu
         each item in menu
           li.menu-item
             if item.childitems
@@ -18,8 +15,6 @@ header.header
                     a(href=`${childitem.pagelink}`).menu-link #{childitem.pagetitle}
             else
               a(href=`${item.pagelink}`).menu-link #{item.pagetitle}
-        li.menu-item
-          a(href="https://www.instagram.com/haave.haave/" target="blank" rel="noopener noreferrer").menu-link Instagram
     button#menu-button(class=`${textcolor}`) Menu
   .overlay
 

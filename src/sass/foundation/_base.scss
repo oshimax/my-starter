@@ -1,0 +1,29 @@
+@use '../global' as *;
+
+body {
+	color: $color-text;
+	font-family: $font-base;
+	line-height: 1.7;
+	position: relative;
+}
+
+ul,
+ol {
+	list-style: none;
+}
+
+img {
+	height: auto;
+	max-width: 100%;
+	vertical-align: top;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+a,
+button {
+	color: inherit;
+	text-decoration: none;
+}

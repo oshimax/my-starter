@@ -1,23 +1,8 @@
-extends layouts/_layout.pug
+extends ./_layout
 
 block config
-  - const title = "Contact ― HAAVE"
-  - const description = "遊びごごろのあるモダンなスタイルを叶えてくれる 厳選された上質な素材のみを使用する事にこだわった 大人になった今だからこそ好きだと思えるもの。"
-  - const url = "/contact"
-  - const bgcolor = "#E5E5E5"
-  - const footercolor = "#AAA89A"
+  - const title = "Contact ― Title"
+  - const description = "Contact"
 
 block content
   main.main
-    .container
-      h1.page-title Contact
-      section.contact-section
-        .contact-column
-          p For all customer and sales inquries, please contact:#[br]
-            span
-              a.mail(href="mailto:info@haave-haave.com") info@haave-haave.com
-          p Follow HAAVE on 
-            a(href="mailto:info@haave-haave.com") Instagram
-        .contact-column
-          figure
-            img(src="../images/contact.jpg", alt="")

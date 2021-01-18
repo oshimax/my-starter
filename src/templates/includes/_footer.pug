@@ -1,14 +1,9 @@
 footer.footer(style=`background-color: ${footercolor}`)
   .footer-inner
-    .footer-logo
-      a(href="/")
-        img(src="../images/haave_logo.svg")
     nav.footer-nav
       ul.footer-menu
         each item in menu
           li.menu-item
             a(href=item.pagelink).menu-link #{item.pagetitle}
-        li.menu-item
-          a(href="https://www.instagram.com/haave.haave/" target="blank" rel="noopener noreferrer").menu-link Instagram
     .footer-copyright
-      p © HAAVE #[br] All rights reserved
+      p © Title

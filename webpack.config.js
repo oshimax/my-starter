@@ -11,13 +11,14 @@ module.exports = {
   mode: MODE,
 
   devtool: 'source-map',
-  entry: './src/javascripts/main.js',
+  entry: './src/js/main.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: './javascripts/[name]-[hash].js',
+    filename: './js/[name]-[hash].js',
   },
   devServer: {
     contentBase: path.resolve(__dirname, 'dist'),
+    open: true,
   },
   module: {
     rules: [
@@ -39,7 +40,6 @@ module.exports = {
             options: {
               presets: [
                 ['@babel/preset-env', { 'targets': '> 0.25%, not dead' }],
-                '@babel/preset-react',
               ],
             },
           },
@@ -97,7 +97,15 @@ module.exports = {
               mozjpeg: {
                 progressive: true,
                 quality: 65,
-              }
+              },
+              pngquant: {
+                quality: [0.65, 0.90],
+              },
+              imageminSvgo: ({
+                plugins: [
+                    {removeViewBox: false}
+                ]
+              })
             },
           },
         ],
@@ -120,7 +128,7 @@ module.exports = {
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: './stylesheets/[name]-[hash].css',
+      filename: './css/[name].css',
     }),
     new HtmlWebpackPlugin({
       template: './src/templates/index.pug',
@@ -131,20 +139,8 @@ module.exports = {
       filename: 'about.html',
     }),
     new HtmlWebpackPlugin({
-      template: './src/templates/lookbook.pug',
-      filename: 'lookbook.html',
-    }),
-    new HtmlWebpackPlugin({
-      template: './src/templates/single.pug',
-      filename: 'single.html',
-    }),
-    new HtmlWebpackPlugin({
       template: './src/templates/contact.pug',
       filename: 'contact.html',
-    }),
-    new HtmlWebpackPlugin({
-      template: './src/templates/stockists.pug',
-      filename: 'stockists.html',
     }),
     new CleanWebpackPlugin(),
   ],

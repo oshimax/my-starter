@@ -1,48 +1,9 @@
-extends layouts/_layout.pug
+extends ./_layout
 
 block config
-  - const title = "HAAVE"
-  - const description = "遊びごごろのあるモダンなスタイルを叶えてくれる 厳選された上質な素材のみを使用する事にこだわった 大人になった今だからこそ好きだと思えるもの。"
-  - const url = "/"
-  - const bgcolor = "#C19F8B"
-  - const footercolor = "#E0E0E0"
-  - const textcolor = "light"
+  - const title = "Title"
+  - const description = "Home"
 
 block content
   main.main
-    section.hero
-      .hero-inner
-        img.hero-image(src="../images/hero.jpg" alt="hero-image")
-        .hero-text
-          .hero-concept.
-            Good quality#[br]
-            Still somewhere Playful#[br]
-            What I like even when I grow up Rather#[br]
-            Because I'm an adult now What you think you like
-          a(href="/contact.html")
-            .link Contact
-              i.las.la-arrow-right
-    section.lead
-      p.
-        It gives you a playful and modern style#[br]
-        We use  only carefully selected high-quality materials so,#[br]
-        I like it now that I’m a grown woman.
-    section.introduction
-      ul.introduction-list
-        li.introduction-item.about
-          a(href="/about.html")
-            h2 About
-            .introduction-image
-            .caption
-              p.
-                View more...#[br]
-                Concept, Factory, Story
-        li.introduction-item.instagram
-          a(href="https://www.instagram.com/haave.haave/" target="blank" rel="noopener noreferrer")
-            h2 Instagram
-            .introduction-image
-            .caption
-              p.
-                Follow HAAVE on Instagram#[br]
-                @haave_haave
-    include includes/_productlist
+

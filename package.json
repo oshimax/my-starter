@@ -7,12 +7,37 @@
     "last 2 versions",
     "Firefox ESR"
   ],
+  "config": {
+    "image": {
+      "src": "src/images",
+      "dist": "dist/images"
+    },
+    "js": {
+      "entry": "src/js/bundle.js",
+      "output": "dist/js/bundle.js"
+    },
+    "css": {
+      "src": "src/sass",
+      "dist": "dist/css",
+      "style": "compressed",
+      "map": "--map"
+    },
+    "pug": {
+      "src": "src/templates",
+      "dist": "dist"
+    }
+  },
   "scripts": {
-    "start": "webpack serve",
-    "build": "webpack --mode production",
-    "build:dev": "webpack",
-    "lint:css": "stylelint \"src/stylesheets/**/*\" --fix",
-    "lint": "eslint \"./src/javascripts/**/*\""
+    "start": "run-p serve sass watch:sass",
+    "serve": "webpack serve",
+    "build": "run-p sass webpack",
+    "presass": "stylelint \"$npm_package_config_css_src/**/*\" --fix",
+    "sass": "sass $npm_package_config_css_src:$npm_package_config_css_dist --style=expanded",
+    "webpack": "webpack",
+    "lint": "eslint \"./src/js/**/*\"",
+    "watch:sass": "onchange \"$npm_package_config_css_src/**/*\" -e \".DS_Store\" -- npm run sass",
+    "watch:webpack": "npm run webpack -- --watch",
+    "watch": "run-p watch:*"
   },
   "author": "Shogo",
   "license": "UNLICENSED",
@@ -20,8 +45,6 @@
   "devDependencies": {
     "@babel/core": "^7.9.6",
     "@babel/preset-env": "^7.9.6",
-    "@babel/preset-react": "^7.12.10",
-    "@types/react": "^17.0.0",
     "autoprefixer": "^10.1.0",
     "babel-loader": "^8.2.2",
     "clean-webpack-plugin": "^3.0.0",
@@ -32,7 +55,8 @@
     "html-webpack-plugin": "^4.5.0",
     "image-webpack-loader": "^7.0.1",
     "mini-css-extract-plugin": "^1.3.2",
-    "node-sass": "^5.0.0",
+    "npm-run-all": "^4.1.5",
+    "onchange": "^7.1.0",
     "postcss": "^8.2.1",
     "postcss-loader": "^4.1.0",
     "pug-html-loader": "^1.1.5",
@@ -40,7 +64,6 @@
     "sass": "^1.30.0",
     "sass-loader": "^10.1.0",
     "style-loader": "^2.0.0",
-    "styled-components": "^5.2.1",
     "stylelint": "^13.8.0",
     "stylelint-config-sass-guidelines": "^7.1.0",
     "ts-loader": "^8.0.11",
