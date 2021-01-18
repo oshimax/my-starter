@@ -1,3 +1,3 @@
 # My starter
 
-starter for Static site
+Starter for static site
