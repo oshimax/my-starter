@@ -1,3 +1,3 @@
-# HAAVE
+# My starter
 
-website for HAAVE
+starter for Static site
